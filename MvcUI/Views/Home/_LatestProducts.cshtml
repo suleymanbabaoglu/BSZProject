@@ -1,0 +1,22 @@
+﻿@model List<MvcUI.Models.Entities.Products>
+<section class="top-letest-product-section">
+    <div class="container">
+        <div class="section-title">
+            <h2>LATEST PRODUCTS</h2>
+        </div>
+        <div class="product-slider owl-carousel">
+            @foreach (var product in Model)
+            {
+                <div class="product-item">
+                    <div class="pi-pic">
+                        <img src="@Url.Content("~/Contents/img/product/"+ product.ProductImage1)" alt="">
+                    </div>
+                    <div class="pi-text">
+                        <h6>$35,00</h6>
+                        <p>@product.ProductText</p>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</section>

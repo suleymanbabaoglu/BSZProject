@@ -1,0 +1,20 @@
+﻿@model List<MvcUI.Models.Entities.Features>
+<section class="features-section">
+    <div class="container-fluid">
+        <div class="row">
+            @foreach (var feature in Model)
+            {
+                <div class="col-md-4 p-0 feature">
+                    <a href="@feature.FeatureUrl">
+                        <div class="feature-inner">
+                            <div class="feature-icon">
+                                <img src="@Url.Content("~/Contents/img/icons/"+feature.FeatureImage)" alt="#">
+                            </div>
+                            <h2>@feature.FeatureText</h2>
+                        </div>
+                    </a>
+                </div>
+            }
+        </div>
+    </div>
+</section>

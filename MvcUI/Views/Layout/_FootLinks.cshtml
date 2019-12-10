@@ -1,0 +1,18 @@
+﻿@model List<MvcUI.Models.Entities.Footlinks>
+ <div class="col-lg-3 col-sm-6">
+    <div class="footer-widget about-widget">
+        <h2>USEFUL LINKS</h2>
+        <ul>
+            @foreach (var link in Model.Take(5))
+            {
+                <li><a href="@link.LinkUrl">@link.LinkText</a></li>
+            }
+        </ul>
+        <ul>
+            @foreach (var link in Model.Skip(5).Take(5))
+            {
+                <li><a href="@link.LinkUrl">@link.LinkText</a></li>
+            }
+        </ul>
+    </div>
+</div>

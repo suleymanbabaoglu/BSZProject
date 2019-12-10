@@ -1,0 +1,129 @@
+﻿@{
+    Layout = "~/Areas/YoneticiStation/Views/Shared/_mainView.cshtml";
+}
+@model Tuple<MvcUI.Models.Entities.Settings, MvcUI.Models.Entities.Contact>
+
+<div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+        <h1>
+            Settings
+            <br />
+            <small>You can set your settings on this page.</small>
+        </h1>
+        <ol class="breadcrumb">
+            <li><a href="#"><i class="fa fa-dashboard"></i> Settings</a></li>
+            <li class="active">Settings</li>
+        </ol>
+    </section>
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="box">
+                <div class="box-body table-responsive no-padding">
+                    <div class="box">
+                        <div class="box-body col-xs-8">
+                            @using (Html.BeginForm("UpdateSettings", "Settings", FormMethod.Post, new { enctype = "multipart/form-data" }))
+                            {
+                                <ul class="nav nav-pills text-center">
+                                    <li class="active">
+                                        <a href="#1a" data-toggle="tab">General Settings</a>
+                                    </li>
+                                    <li>
+                                        <a href="#2a" data-toggle="tab">Mail Settings</a>
+                                    </li>
+                                    <li>
+                                        <a href="#3a" data-toggle="tab">Contact Settings</a>
+                                    </li>
+                                </ul>
+                                <br />
+                                <div class="tab-content clearfix">
+                                    <div class="tab-pane active" id="1a">
+                                        <div class="form-group">
+                                            @Html.LabelFor(m => m.Item1.title, "Title")
+                                            @Html.TextBoxFor(m => m.Item1.title, new { @class = "form-control" })
+                                        </div>
+                                        <div class="form-group">
+                                            @Html.LabelFor(m => m.Item1.description, "Description")
+                                            @Html.TextBoxFor(m => m.Item1.description, new { @class = "form-control" })
+                                        </div>
+                                        <div class="form-group">
+                                            @Html.LabelFor(m => m.Item1.keywords, "Keywords")
+                                            @Html.TextBoxFor(m => m.Item1.keywords, new { @class = "form-control" })
+                                        </div>
+                                        <div class="form-group">
+                                            @Html.LabelFor(m => m.Item1.copyright, "Copyright")
+                                            @Html.TextBoxFor(m => m.Item1.copyright, new { @class = "form-control" })
+                                        </div>
+                                        <div class="form-group">
+                                            @Html.LabelFor(m => m.Item1.prices_isactive, "Prices is Active")
+                                            @Html.CheckBoxFor(m => m.Item1.prices_isactive, new { @class = "checkbox" })
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane" id="2a">
+                                        <div class="form-group">
+                                            @Html.LabelFor(m => m.Item1.email, "Email")
+                                            @Html.TextBoxFor(m => m.Item1.email, new { @class = "form-control" })
+                                        </div>
+                                        <div class="form-group">
+                                            @Html.LabelFor(m => m.Item1.mailsendfrom, "Mail From")
+                                            @Html.TextBoxFor(m => m.Item1.mailsendfrom, new { @class = "form-control" })
+                                        </div>
+                                        <div class="form-group">
+                                            @Html.LabelFor(m => m.Item1.mailserver, "Mail Server")
+                                            @Html.TextBoxFor(m => m.Item1.mailserver, new { @class = "form-control" })
+                                        </div>
+                                        <div class="form-group">
+                                            @Html.LabelFor(m => m.Item1.mailport, "Mail Port")
+                                            @Html.TextBoxFor(m => m.Item1.mailport, new { @class = "form-control" })
+                                        </div>
+                                        <div class="form-group">
+                                            @Html.LabelFor(m => m.Item1.mailuser, "Mail User")
+                                            @Html.TextBoxFor(m => m.Item1.mailuser, new { @class = "form-control" })
+                                        </div>
+                                        <div class="form-group">
+                                            @Html.LabelFor(m => m.Item1.mailpass, "Mail Password")
+                                            @Html.TextBoxFor(m => m.Item1.mailpass, new { @class = "form-control" })
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane" id="3a">
+                                        <div class="form-group">
+                                            @Html.LabelFor(m => m.Item2.About_text, "About Text")
+                                            @Html.TextBoxFor(m => m.Item2.About_text, new { @class = "form-control" })
+                                        </div>
+                                        <div class="form-group">
+                                            @Html.LabelFor(m => m.Item2.Address, "Address")
+                                            @Html.TextBoxFor(m => m.Item2.Address, new { @class = "form-control" })
+                                        </div>
+                                        <div class="form-group">
+                                            @Html.LabelFor(m => m.Item2.Facebook, "Facebook")
+                                            @Html.TextBoxFor(m => m.Item2.Facebook, new { @class = "form-control" })
+                                        </div>
+                                        <div class="form-group">
+                                            @Html.LabelFor(m => m.Item2.Google_plus, "Google+")
+                                            @Html.TextBoxFor(m => m.Item2.Google_plus, new { @class = "form-control" })
+                                        </div>
+                                        <div class="form-group">
+                                            @Html.LabelFor(m => m.Item2.Instagram, "Instagram")
+                                            @Html.TextBoxFor(m => m.Item2.Instagram, new { @class = "form-control" })
+                                        </div>
+                                        <div class="form-group">
+                                            @Html.LabelFor(m => m.Item2.Phone, "Phone")
+                                            @Html.TextBoxFor(m => m.Item2.Phone, new { @class = "form-control" })
+                                        </div>
+
+                                    </div>
+                                    <div class="box-footer">
+                                        <button type="submit" class="btn btn-primary">Update</button>
+                                    </div>
+                                </div>
+                            }
+                        </div>
+                        <!-- /.box-body -->
+                    </div>
+                </div>
+                <!-- /.box-body -->
+            </div>
+            <!-- /.box -->
+        </div>
+    </div>
+</div>

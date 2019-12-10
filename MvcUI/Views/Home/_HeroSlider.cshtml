@@ -1,0 +1,29 @@
+﻿@model List<MvcUI.Models.Entities.Sliders>
+<section class="hero-section">
+    <div class="hero-slider owl-carousel">
+        @foreach (var slider in Model)
+        {
+            <div class="hs-item set-bg" data-setbg="@Url.Content("~/Contents/img/"+slider.SliderBackground)">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xl-6 col-lg-7 text-white">
+                            <span>@slider.SliderText1</span>
+                            <h2>@slider.SliderText2</h2>
+                            <p>@slider.SliderInformation</p>
+                            <a href="@Url.Content("~/"+slider.SliderLink1)" class="site-btn sb-line">@slider.SliderLinkText1</a>
+                            <a href="@Url.Content("~/"+slider.SliderLink2)" class="site-btn sb-white">@slider.SliderLinkText2</a>
+                        </div>
+                    </div>
+                    <div class="offer-card text-white">
+                        <span>from</span>
+                        <h2><small>@slider.SliderPrice@slider.SliderCurrency</small></h2>
+                        <p>SHOP NOW</p>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+    <div class="container">
+        <div class="slide-num-holder" id="snh-1"></div>
+    </div>
+</section>

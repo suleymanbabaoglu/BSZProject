@@ -1,0 +1,28 @@
+﻿@model List<MvcUI.Models.Entities.Products>
+@{
+    Layout = "~/Views/Layout/_Layout.cshtml";
+}
+<section class="product-filter-section">
+    <div class="container">
+        <div class="section-title">
+            <br />
+        </div>
+        <div class="row">
+            @foreach (var product in Model)
+            {
+                <div class="col-lg-3 col-sm-6">
+                    <div class="product-item">
+                        <div class="pi-pic">
+                            <img src="@Url.Content("~/Contents/img/product/" + product.ProductImage1)" alt="">
+
+                        </div>
+                        <div class="pi-text">
+                            @*<h6>$35,00</h6>*@
+                            <p>@product.ProductText </p> 
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</section>

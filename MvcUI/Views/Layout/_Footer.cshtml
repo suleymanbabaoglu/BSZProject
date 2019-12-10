@@ -1,0 +1,60 @@
+﻿@model MvcUI.Models.Entities.Contact
+<section class="footer-section">
+    <div class="container">
+        <div class="footer-logo text-center">
+            <a href="@Url.Content("~/")"><img src="@Url.Content("~/Contents/img/" + ViewBag.settings.logo)" alt="" class="img-responsive" height="150"></a>
+        </div>
+        <div class="row">
+            <div class="col-lg-3 col-sm-6">
+                <div class="footer-widget about-widget">
+                    <h2>About</h2>
+                    <p>@Model.About_text</p>
+                    <img src="@Url.Content("~/Contents/img/cards.png")" alt="">
+                </div>
+            </div>
+            @Html.Action("_FootLinks", "Layout")
+
+            @Html.Action("_LastBlog", "Layout")
+
+            <div class="col-lg-3 col-sm-6">
+                <div class="footer-widget contact-widget">
+                    <h2>Questions</h2>
+                    <div class="con-info">
+                        <span>C.</span>
+                        <p>@ViewBag.settings.title</p>
+                    </div>
+                    <div class="con-info">
+                        <span>B.</span>
+                        <p>@Model.Address </p>
+                    </div>
+                    <div class="con-info">
+                        <span>T.</span>
+                        <p>@Model.Phone</p>
+                    </div>
+                    <div class="con-info">
+                        <span>E.</span>
+                        <p>@Model.Email</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="social-links-warp">
+        <div class="container">
+            <div class="social-links text-center">
+                <a href="@Url.Content("https://instagram.com/"+ Model.Instagram)" class="instagram" target="_blank"><i class="fa fa-instagram"></i><span>instagram</span></a>
+                <a href="@Url.Content("https://plus.google.com/"+ Model.Google_plus)" class="google-plus" target="_blank"><i class="fa fa-google-plus"></i><span>g+plus</span></a>
+                <a href="@Url.Content("https://facebook.com/"+ Model.Facebook)" class="facebook" target="_blank"><i class="fa fa-facebook"></i><span>facebook</span></a>
+
+            </div>
+
+            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            <p class="text-white text-center mt-5">
+                Copyright &copy;
+                    <script>document.write(new Date().getFullYear());</script> @ViewBag.settings.copyright <br/> <small>This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a></small>
+            </p>
+            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+
+        </div>
+    </div>
+</section>

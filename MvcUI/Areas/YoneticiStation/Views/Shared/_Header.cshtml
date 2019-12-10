@@ -1,0 +1,35 @@
+﻿<header class="main-header">
+    <!-- Logo -->
+    <a href="~/YoneticiStation/AdminHome" class="logo">
+        <!-- mini logo for sidebar mini 50x50 pixels -->
+        <span class="logo-mini"><b>LB</b></span>
+        <!-- logo for regular state and mobile devices -->
+        <span class="logo-lg"><b>LolliBaby</b></span>
+    </a>
+    <!-- Header Navbar: style can be found in header.less -->
+    <nav class="navbar navbar-static-top">
+        <!-- Sidebar toggle button-->
+        <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </a>
+        <div class="navbar-custom-menu">
+
+            @using (Html.BeginForm("LogOff", "Login", FormMethod.Post))
+            {
+                @Html.AntiForgeryToken()
+                <button type="submit" class="btn btn-danger" style="margin-top: 10%; margin-right: 10px;">
+                    <i class="fa fa-power-off"></i> <span>Log Off</span>
+                </button>
+            }
+        </div>
+        <div class="navbar-custom-menu">
+            <a href="~/" target="_blank" class="btn btn-warning" style="margin-top: 5%;margin-right: 10px;">
+                <i class="fa fa-home"></i> <span>LolliBaby HomePage</span>
+            </a>
+        </div>
+       
+    </nav>
+</header>
