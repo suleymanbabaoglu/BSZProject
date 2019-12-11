@@ -1,0 +1,80 @@
+﻿
+@{
+    Layout = "~/Areas/YoneticiStation/Views/Shared/_mainView.cshtml";
+}
+@model List<MvcUI.Models.Entities.Products>
+
+<div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+        <h1>
+            Products
+            <br />
+            <small>You can manage your products on this page.</small>
+        </h1>
+        <ol class="breadcrumb">
+            <li><a href="#"><i class="fa fa-dashboard"></i> Products</a></li>
+            <li class="active">Products</li>
+        </ol>
+    </section>
+    <br />
+    <div class="row">
+        <div class="col-xs-12">
+
+            <div class="box">
+                <div class="box-header">
+                    <a href="@Url.Content("~/YoneticiStation/Product/ProductAdd")" class="btn btn-success">Add Product</a>
+                </div>
+                <!-- /.box-header -->
+                <div class="box-body">
+                    <div id="example2_wrapper" class="dataTables_wrapper form-inline dt-bootstrap">
+                        <div class="row"><div class="col-sm-6"></div><div class="col-sm-6"></div></div>
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <table id="example2" class="table table-bordered table-hover dataTable" role="grid" aria-describedby="example2_info">
+                                    <thead>
+                                        <tr role="row">
+                                            <th>Product ID</th>
+                                            <th>Product Brand</th>
+                                            <th>Product Text</th>
+                                            <th>Product Barcode</th>
+                                            <th>Product Info</th>
+                                            <th>Product Image1</th>
+                                            <th>Product Image2</th>
+                                            <th>Product Image3</th>
+                                            <th>Product Image4</th>
+                                            <th></th>
+                                            <th></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @foreach (var products in Model)
+                                        {
+                                            <tr role="row">
+                                                <td>@products.ProductID</td>
+                                                <td>@products.ProductBrand</td>
+                                                <td>@products.ProductText</td>
+                                                <td>@products.ProductBarcode</td>
+                                                <td>@products.ProductInfo</td>
+                                                <td>@products.ProductImage1</td>
+                                                <td>@products.ProductImage2</td>
+                                                <td>@products.ProductImage3</td>
+                                                <td>@products.ProductImage4</td>
+                                                <td class="no-padding text-center"><a href="@Url.Content("~/YoneticiStation/Product/ProductUpdate/"+products.ProductID)" class="btn btn-primary">Update</a></td>
+                                                <td class="no-padding text-center"><a href="@Url.Content("~/YoneticiStation/Product/ProductDelete/"+products.ProductID)" class="btn btn-danger">Delete</a></td>
+                                            </tr>
+                                        }
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <!-- /.box-body -->
+            </div>
+        </div>
+    </div>
+</div>
+
+

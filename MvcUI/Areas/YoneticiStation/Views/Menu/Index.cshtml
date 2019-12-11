@@ -17,6 +17,7 @@
             <li class="active">Menus</li>
         </ol>
     </section>
+    <br />
     <div class="row">
         <div class="col-xs-12">
 
@@ -43,23 +44,23 @@
                                         </tr>
                                     </thead>
                                     <tbody>
-                                    @foreach(var menu in Model)
-                                    {
-                                        <tr role="row">
-                                            <td>@menu.MenuID</td>
-                                            <td>@menu.MenuName</td>
-                                            <td>@menu.MenuOrder</td>
-                                            <td>@menu.MenuUrl</td>
-                                            <td>@menu.MenuParentID</td>
-                                            <td class="no-padding text-center"><a href="@Url.Content("~/YoneticiStation/Menu/MenuUpdate/"+menu.MenuID)" class="btn btn-primary">Update</a></td>
-                                            <td class="no-padding text-center"><a href="@Url.Content("~/YoneticiStation/Menu/MenuDelete/"+menu.MenuID)" class="btn btn-danger">Delete</a></td>
-                                        </tr>
-                                    }
+                                        @foreach (var menu in Model)
+                                        {
+                                            <tr role="row">
+                                                <td>@menu.MenuID</td>
+                                                <td>@menu.MenuName</td>
+                                                <td>@menu.MenuOrder</td>
+                                                <td>@menu.MenuUrl</td>
+                                                <td>@menu.MenuParentID</td>
+                                                <td class="no-padding text-center"><a href="@Url.Content("~/YoneticiStation/Menu/MenuUpdate/"+menu.MenuID)" class="btn btn-primary">Update</a></td>
+                                                <td class="no-padding text-center"><a href="@Url.Content("~/YoneticiStation/Menu/MenuDelete/"+menu.MenuID)" class="btn btn-danger">Delete</a></td>
+                                            </tr>
+                                        }
                                     </tbody>
                                 </table>
                             </div>
                         </div>
-                      
+
                     </div>
                 </div>
                 <!-- /.box-body -->

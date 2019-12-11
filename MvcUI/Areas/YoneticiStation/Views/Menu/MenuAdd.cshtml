@@ -17,12 +17,14 @@
             <li class="active">Menu Add</li>
         </ol>
     </section>
+    <br />
     <div class="row">
         <div class="col-xs-12">
             <div class="box">
                 <div class="box-body table-responsive no-padding">
                     <div class="box">
-                        <div class="box-body col-xs-8">
+                        <div class="col-xs-8">
+                            <br />
                             @using (Html.BeginForm("MenuAdd", "Menu", FormMethod.Post))
                             {
                                 <div class="form-group">
@@ -35,7 +37,7 @@
                                 </div>
                                 <div class="form-group">
                                     @Html.LabelFor(m => m.MenuParentID, "Parent ID")
-                                    @Html.TextBoxFor(m=>m.MenuParentID, new { @class = "form-control" })
+                                    @Html.TextBoxFor(m => m.MenuParentID, new { @class = "form-control" })
                                 </div>
                                 <div class="form-group">
                                     @Html.LabelFor(m => m.MenuUrl, "URL")

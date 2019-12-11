@@ -16,18 +16,20 @@
             <li class="active">Menu Update</li>
         </ol>
     </section>
+    <br />
     <div class="row">
         <div class="col-xs-12">
             <div class="box">
                 <div class="box-body table-responsive no-padding">
                     <div class="box">
-                        <div class="box-body col-xs-8">
+                        <div class="col-xs-8">
+                            <br />
                             @using (Html.BeginForm("MenuUpdate", "Menu", FormMethod.Post))
                             {
                                 <div class="form-group">
                                     @Html.LabelFor(m => m.MenuName, "Menu Name")
                                     @Html.TextBoxFor(m => m.MenuName, new { @class = "form-control" })
-                                    @Html.Hidden("id",Model.MenuID)
+                                    @Html.Hidden("id", Model.MenuID)
                                 </div>
                                 <div class="form-group">
                                     @Html.LabelFor(m => m.MenuOrder, "Menu Order")

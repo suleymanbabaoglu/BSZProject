@@ -2854,6 +2854,7 @@
     <Compile Include="Areas\YoneticiStation\Controllers\AdminHomeController.cs" />
     <Compile Include="Areas\YoneticiStation\Controllers\LoginController.cs" />
     <Compile Include="Areas\YoneticiStation\Controllers\MenuController.cs" />
+    <Compile Include="Areas\YoneticiStation\Controllers\ProductController.cs" />
     <Compile Include="Areas\YoneticiStation\Controllers\SettingsController.cs" />
     <Compile Include="Areas\YoneticiStation\Controllers\SharedController.cs" />
     <Compile Include="Areas\YoneticiStation\Controllers\_SessionController.cs" />
@@ -3200,6 +3201,9 @@
     <Content Include="Contents\AContent\bower_components\datatables.net\.bower.json" />
     <Content Include="Contents\AContent\bower_components\datatables.net\bower.json" />
     <Content Include="Contents\AContent\bower_components\datatables.net\Readme.md" />
+    <Content Include="Areas\YoneticiStation\Views\Product\Index.cshtml" />
+    <Content Include="Areas\YoneticiStation\Views\Product\ProductAdd.cshtml" />
+    <Content Include="Areas\YoneticiStation\Views\Product\ProductUpdate.cshtml" />
     <None Include="packages.config" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Layout\_Footer.cshtml" />
