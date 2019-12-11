@@ -1,0 +1,63 @@
+﻿
+@{
+    Layout = "~/Areas/YoneticiStation/Views/Shared/_mainView.cshtml";
+}
+@model MvcUI.Models.Entities.Menus
+
+<div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+        <h1>
+            Menu Adding Page
+            <br />
+            <small>You can add your menus on this page.</small>
+        </h1>
+        <ol class="breadcrumb">
+            <li><a href="#"><i class="fa fa-dashboard"></i> Menu</a></li>
+            <li class="active">Menu Add</li>
+        </ol>
+    </section>
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="box">
+                <div class="box-body table-responsive no-padding">
+                    <div class="box">
+                        <div class="box-body col-xs-8">
+                            @using (Html.BeginForm("MenuAdd", "Menu", FormMethod.Post))
+                            {
+                                <div class="form-group">
+                                    @Html.LabelFor(m => m.MenuName, "Menu Name")
+                                    @Html.TextBoxFor(m => m.MenuName, new { @class = "form-control" })
+                                </div>
+                                <div class="form-group">
+                                    @Html.LabelFor(m => m.MenuOrder, "Menu Order")
+                                    @Html.TextBoxFor(m => m.MenuOrder, new { @class = "form-control" })
+                                </div>
+                                <div class="form-group">
+                                    @Html.LabelFor(m => m.MenuParentID, "Parent ID")
+                                    @Html.TextBoxFor(m=>m.MenuParentID, new { @class = "form-control" })
+                                </div>
+                                <div class="form-group">
+                                    @Html.LabelFor(m => m.MenuUrl, "URL")
+                                    @Html.TextBoxFor(m => m.MenuUrl, new { @class = "form-control" })
+                                </div>
+
+                                <div class="box-footer">
+                                    <button type="submit" class="btn btn-primary">Add Menu</button>
+                                    <a href="@Url.Content("~/YoneticiStation/Menu")" class="btn btn-danger">Cancel</a>
+                                </div>
+
+                            }
+                        </div>
+                        <!-- /.box-body -->
+                    </div>
+                </div>
+                <!-- /.box-body -->
+            </div>
+            <!-- /.box -->
+        </div>
+    </div>
+</div>
+
+
+
