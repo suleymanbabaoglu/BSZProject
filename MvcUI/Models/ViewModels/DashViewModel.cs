@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using MvcUI.Models.Entities;
+﻿using System.Linq;
 
 namespace MvcUI.Models.ViewModels
 {

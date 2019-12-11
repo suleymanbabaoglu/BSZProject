@@ -44,7 +44,9 @@ namespace MvcUI
                         "~/Contents/AContent/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js",
                         "~/Contents/AContent/dist/js/adminlte.min.js",
                         "~/Contents/AContent/dist/js/pages/dashboard.js",
-                        "~/Contents/AContent/dist/js/demo.js"
+                        "~/Contents/AContent/dist/js/demo.js",
+                        "~/Contents/AContent/bower_components/datatables.net/js/jquery.dataTables.min.js",
+                        "~/Contents/AContent/bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js"
                         ));     
                          bundles.Add(new StyleBundle("~/AdminCss").Include(
                         "~/Contents/AContent/bower_components/bootstrap/dist/css/bootstrap.min.css",

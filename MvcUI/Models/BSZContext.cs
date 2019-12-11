@@ -2,10 +2,7 @@ using MvcUI.Models.Entities;
 
 namespace MvcUI.Models
 {
-    using System;
     using System.Data.Entity;
-    using System.ComponentModel.DataAnnotations.Schema;
-    using System.Linq;
 
     public partial class BSZContext : DbContext
     {

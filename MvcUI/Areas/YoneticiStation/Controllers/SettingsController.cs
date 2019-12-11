@@ -1,12 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
-using System.Web;
 using System.Web.Mvc;
 using MvcUI.Models;
 using MvcUI.Models.Entities;
-using MvcUI.Models.ViewModels;
 
 namespace MvcUI.Areas.YoneticiStation.Controllers
 {

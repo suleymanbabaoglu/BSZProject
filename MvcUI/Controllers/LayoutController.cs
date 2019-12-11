@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Web;
 using System.Web.Mvc;
 using MvcUI.Models;
 using MvcUI.Models.Entities;
@@ -65,18 +64,15 @@ namespace BSZProject.MvcUI.Controllers
                 return PartialView(menuList);
             }
         }
-
+       
         public ActionResult _Footer()
         {
             using (var db = new BSZContext())
             {
-                settings = new Settings();
-                settings = db.settings.FirstOrDefault();
-                contact = new Contact();
-                contact = db.contact.FirstOrDefault();
+                var settings = db.settings.FirstOrDefault();
+                var contact = db.contact.FirstOrDefault();
 
-                ViewBag.settings = settings;
-                return PartialView(contact);
+                return PartialView(Tuple.Create(settings,contact)); //2 model to view
             }
         }
 

@@ -1,5 +1,4 @@
-﻿@using System.Web.Optimization;
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8">
@@ -44,6 +43,19 @@
     <script>
         $(document).ready(function () {
             $('.sidebar-menu').tree()
+        })
+    </script>
+    <script>
+
+        $(document).ready(function () {
+            $('#example2').DataTable({
+                'paging': true,
+                'lengthChange': false,
+                'searching': false,
+                'ordering': true,
+                'info': true,
+                'autoWidth': false
+            })
         })
     </script>
 </body>

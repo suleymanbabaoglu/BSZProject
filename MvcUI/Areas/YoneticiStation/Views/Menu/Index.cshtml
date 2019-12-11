@@ -1,0 +1,70 @@
+﻿
+@{
+    Layout = "~/Areas/YoneticiStation/Views/Shared/_mainView.cshtml";
+}
+@model List<MvcUI.Models.Entities.Menus>
+
+<div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+        <h1>
+            Menus
+            <br />
+            <small>You can set your menus on this page.</small>
+        </h1>
+        <ol class="breadcrumb">
+            <li><a href="#"><i class="fa fa-dashboard"></i> Menus</a></li>
+            <li class="active">Menus</li>
+        </ol>
+    </section>
+    <div class="row">
+        <div class="col-xs-12">
+
+            <div class="box">
+                <div class="box-header">
+                    <a href="@Url.Content("~/YoneticiStation/Menu/MenuAdd")" class="btn btn-success">Add Menu</a>
+                </div>
+                <!-- /.box-header -->
+                <div class="box-body">
+                    <div id="example2_wrapper" class="dataTables_wrapper form-inline dt-bootstrap">
+                        <div class="row"><div class="col-sm-6"></div><div class="col-sm-6"></div></div>
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <table id="example2" class="table table-bordered table-hover dataTable" role="grid" aria-describedby="example2_info">
+                                    <thead>
+                                        <tr role="row">
+                                            <th>Menu ID</th>
+                                            <th>Menu Name</th>
+                                            <th>Menu Order</th>
+                                            <th>Menu URL</th>
+                                            <th>Menu Parent ID</th>
+                                            <th></th>
+                                            <th></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                    @foreach(var menu in Model)
+                                    {
+                                        <tr role="row">
+                                            <td>@menu.MenuID</td>
+                                            <td>@menu.MenuName</td>
+                                            <td>@menu.MenuOrder</td>
+                                            <td>@menu.MenuUrl</td>
+                                            <td>@menu.MenuParentID</td>
+                                            <td class="no-padding text-center"><a href="@Url.Content("~/YoneticiStation/Menu/MenuUpdate/"+menu.MenuID)" class="btn btn-primary">Update</a></td>
+                                            <td class="no-padding text-center"><a href="@Url.Content("~/YoneticiStation/Menu/MenuDelete/"+menu.MenuID)" class="btn btn-danger">Delete</a></td>
+                                        </tr>
+                                    }
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                      
+                    </div>
+                </div>
+                <!-- /.box-body -->
+            </div>
+        </div>
+    </div>
+</div>
+

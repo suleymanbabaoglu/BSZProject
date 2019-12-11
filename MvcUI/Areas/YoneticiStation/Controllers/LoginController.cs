@@ -1,12 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Data.Entity;
 using System.Linq;
-using System.Net;
-using System.Web;
 using System.Web.Mvc;
 using System.Web.Security;
-using Microsoft.Ajax.Utilities;
 using MvcUI.Models;
 using MvcUI.Models.Entities;
 
