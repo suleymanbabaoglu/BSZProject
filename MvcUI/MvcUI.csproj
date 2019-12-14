@@ -2816,6 +2816,15 @@
     <Content Include="Contents\img\logo.png" />
     <Content Include="Contents\img\mastercart.png" />
     <Content Include="Contents\img\paypal.png" />
+    <Content Include="Contents\img\products\8698881001\8698881001-1.jpg" />
+    <Content Include="Contents\img\products\8698881001\8698881001-2.jpg" />
+    <Content Include="Contents\img\products\8698881001\8698881001-3.jpg" />
+    <Content Include="Contents\img\products\8698881001\8698881001-4.jpg" />
+    <Content Include="Contents\img\products\8698881002\8698881002-1.jpg" />
+    <Content Include="Contents\img\products\8698881003\8698881003-1.jpg" />
+    <Content Include="Contents\img\products\8698881004\8698881004-1.jpg" />
+    <Content Include="Contents\img\products\8698881005\8698881005-1.jpg" />
+    <Content Include="Contents\img\products\8698881006\8698881006-1.jpg" />
     <Content Include="Contents\img\product\1.jpg" />
     <Content Include="Contents\img\product\10.jpg" />
     <Content Include="Contents\img\product\11.jpg" />

@@ -73,7 +73,8 @@ namespace BSZProject.MvcUI.Controllers
                     {
                         ProductID = product.ProductID,
                         ProductText = product.ProductText,
-                        ProductImage1 = product.ProductImage1
+                        ProductImage1 = product.ProductImage1,
+                        ProductBarcode = product.ProductBarcode
                     });
                 }
 
@@ -92,7 +93,8 @@ namespace BSZProject.MvcUI.Controllers
                     {
                         ProductID = product.ProductID,
                         ProductText = product.ProductText,
-                        ProductImage1 = product.ProductImage1
+                        ProductImage1 = product.ProductImage1,
+                        ProductBarcode = product.ProductBarcode
                     });
                 }
 
